@@ -14,8 +14,7 @@ This application uses a Deep Neural Network to predict weekly sales based on sto
 """)
 
 # ------------------ LOAD DATA ------------------
-df = pd.read_csv("data/walmart_sales.csv/train.csv")
-
+df = pd.read_csv("train.csv")
 df['Date'] = pd.to_datetime(df['Date'])
 df['Year'] = df['Date'].dt.year
 df['Month'] = df['Date'].dt.month
