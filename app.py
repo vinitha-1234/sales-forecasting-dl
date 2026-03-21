@@ -21,10 +21,10 @@ df['Month'] = df['Date'].dt.month
 df['Day'] = df['Date'].dt.day
 
 # ------------------ LOAD MODEL ------------------
-model = load_model("models/sales_model.h5", compile=False)
-scaler = joblib.load("models/scaler.save")
-mae = joblib.load("models/mae.save")
-history = joblib.load("models/history.save")
+model = load_model("sales_model.h5", compile=False)
+scaler = joblib.load("scaler.save")
+mae = joblib.load("mae.save")
+history = joblib.load("history.save")
 st.markdown("### 📊 Model Performance")
 st.write(f"Mean Absolute Error (MAE): {mae:.2f}")
 st.caption("MAE represents the average error between predicted and actual sales. Lower values indicate better performance.")
