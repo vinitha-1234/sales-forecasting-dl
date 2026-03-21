@@ -21,7 +21,7 @@ df['Month'] = df['Date'].dt.month
 df['Day'] = df['Date'].dt.day
 
 # ------------------ LOAD MODEL ------------------
-model = load_model("sales_model.h5", compile=False)
+model = load_model("sales_model.keras")
 scaler = joblib.load("scaler.save")
 mae = joblib.load("mae.save")
 history = joblib.load("history.save")
